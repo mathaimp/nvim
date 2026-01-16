@@ -18,7 +18,6 @@ return {
       require("dap-go").setup()
 
       require("nvim-dap-virtual-text").setup {
-        -- This just tries to mitigate the chance that I leak tokens here. Probably won't stop it from happening...
         display_callback = function(variable)
           local name = string.lower(variable.name)
           local value = string.lower(variable.value)
