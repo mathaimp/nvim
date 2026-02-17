@@ -25,7 +25,6 @@ return {
 	},
 	{
 		"francescarpi/buffon.nvim",
-		branch = "main",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 			"nvim-lua/plenary.nvim",

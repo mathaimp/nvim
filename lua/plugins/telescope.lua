@@ -3,7 +3,6 @@ return {
 		"nvim-telescope/telescope.nvim",
 		lazy = true,
 		event = "VimEnter",
-		branch = "0.1.x",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
 			local builtin = require("telescope.builtin")
