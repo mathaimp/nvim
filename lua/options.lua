@@ -43,6 +43,16 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 
 vim.opt.clipboard = "unnamedplus"
+if
+	vim.fn.executable("wl-copy") == 0
+	and vim.fn.executable("xclip") == 0
+	and vim.fn.executable("xsel") == 0
+	and vim.fn.executable("pbcopy") == 0
+	and vim.fn.executable("win32yank.exe") == 0
+	and vim.fn.executable("clip.exe") == 0
+then
+	vim.g.clipboard = "osc52"
+end
 
 vim.diagnostic.config({
 	underline = true,
