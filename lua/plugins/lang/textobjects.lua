@@ -3,7 +3,7 @@ return {
     dependencies = { "echasnovski/mini.ai", version = "*" },
     lazy = false,
     config = function()
-        require("nvim-treesitter.config").setup({
+        require("nvim-treesitter.configs").setup({
             textobjects = {
                 select = {
                     enable = true,
