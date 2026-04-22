@@ -22,7 +22,8 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"jsonls",
-					"pyright",
+					"mypy",
+					"nil",
 					"rust_analyzer",
 				},
 			})

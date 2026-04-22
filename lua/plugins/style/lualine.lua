@@ -1,24 +1,23 @@
 return {
-  'nvim-lualine/lualine.nvim',
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
-  event = "ColorScheme",
-  config = function()
-    require("lualine").setup({
-      options = {
-        --- @usage 'rose-pine' | 'rose-pine-alt'
-        theme = "rose-pine",
-        section_separators = { left = "", right = "" },
-        component_separators = { left = "", right = "" },
-      },
-      sections = {
-        lualine_a = { "mode" },
-        lualine_b = { "branch", "diff", "diagnostics" },
-        lualine_c = { "filename" },
-        lualine_x = { "encoding", "filetype" },
-        lualine_y = { "progress" },
-        lualine_z = { "location" },
-      },
-
-    })
-  end
+	"nvim-lualine/lualine.nvim",
+	dependencies = { "nvim-tree/nvim-web-devicons" },
+	lazy = false,
+	config = function()
+		require("lualine").setup({
+			options = {
+				--- @usage 'rose-pine' | 'rose-pine-alt'
+				theme = "auto",
+				section_separators = { left = "", right = "" },
+				component_separators = { left = "", right = "" },
+			},
+			sections = {
+				lualine_a = { "mode" },
+				lualine_b = { "branch", "diff", "diagnostics" },
+				lualine_c = { "filename" },
+				lualine_x = { "encoding", "filetype" },
+				lualine_y = { "progress" },
+				lualine_z = { "location" },
+			},
+		})
+	end,
 }
