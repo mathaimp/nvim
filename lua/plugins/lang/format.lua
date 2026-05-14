@@ -10,7 +10,7 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				python = { "ruff_format", "black" },
-				nix = { "nixfmt" },
+				nix = { "nixpkgs-fmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
