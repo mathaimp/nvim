@@ -16,21 +16,19 @@ end
 -- Helper to issue highlight commands
 
 local function hi(group, opts)
-	local cmd = { "highlight!", group }
-
-	if opts.guibg then
-		table.insert(cmd, "guibg=" .. opts.guibg)
+	local hl = {}
+	if opts.guibg and opts.guibg ~= NONE then
+		hl.bg = opts.guibg
 	end
-
-	if opts.guifg then
-		table.insert(cmd, "guifg=" .. opts.guifg)
+	if opts.guifg and opts.guifg ~= NONE then
+		hl.fg = opts.guifg
 	end
-
 	if opts.gui then
-		table.insert(cmd, "gui=" .. opts.gui)
+		for _, attr in ipairs(vim.split(opts.gui, ",")) do
+			hl[attr] = true
+		end
 	end
-
-	vim.cmd(table.concat(cmd, " "))
+	vim.api.nvim_set_hl(0, group, hl)
 end
 
 hi("StatusLine", { guibg = NONE, guifg = NONE })

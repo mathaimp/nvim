@@ -7,14 +7,12 @@ vim.pack.add({
 -- require("vim._core.ui2").enable({})
 require("plugins.theme")
 require("plugins.alpha")
-require("plugins.fzf")
-require("oil").setup()
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 vim.api.nvim_create_autocmd("VimEnter", {
 	once = true,
 	callback = function()
 		vim.schedule(function()
+			require("plugins.fzf")
 			require("plugins.yanky")
 			require("plugins.treesitter")
 			require("plugins.lang")
@@ -26,3 +24,12 @@ vim.api.nvim_create_autocmd("VimEnter", {
 		end)
 	end,
 })
+
+local oil_setup_done = false
+vim.keymap.set("n", "-", function()
+	if not oil_setup_done then
+		require("oil").setup()
+		oil_setup_done = true
+	end
+	vim.cmd("Oil")
+end, { desc = "Open parent directory" })

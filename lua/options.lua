@@ -56,18 +56,25 @@ else
 end
 
 -- Diagnostics
-vim.diagnostic.config({
-	underline = true,
-	virtual_text = true,
-	severity_sort = true,
-	update_in_insert = false,
+vim.api.nvim_create_autocmd("VimEnter", {
+	once = true,
+	callback = function()
+		vim.schedule(function()
+			vim.diagnostic.config({
+				underline = true,
+				virtual_text = true,
+				severity_sort = true,
+				update_in_insert = false,
 
-	signs = {
-		text = {
-			[vim.diagnostic.severity.ERROR] = " ",
-			[vim.diagnostic.severity.WARN] = " ",
-			[vim.diagnostic.severity.INFO] = "󰌵 ",
-			[vim.diagnostic.severity.HINT] = " ",
-		},
-	},
+				signs = {
+					text = {
+						[vim.diagnostic.severity.ERROR] = " ",
+						[vim.diagnostic.severity.WARN] = " ",
+						[vim.diagnostic.severity.INFO] = "󰌵 ",
+						[vim.diagnostic.severity.HINT] = " ",
+					},
+				},
+			})
+		end)
+	end,
 })
