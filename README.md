@@ -115,6 +115,7 @@ Before you begin, ensure you have the following external dependencies installed:
 | [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) | A fast and fully programmable startup dashboard |
 | [gbprod/nord.nvim](https://github.com/gbprod/nord.nvim) | The Nord colorscheme for Neovim      |
 | [nvim-tree/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) | Filetype icons (Nerd Font)          |
+| [folke/noice.nvim](https://github.com/folke/noice.nvim) | Better UI for commandline and search          |
 | `lua/plugins/status.lua` (custom)          | Hand-written statusline with mode, git, diagnostics, filetype, and cursor info |
 
 ### Editing & Motions

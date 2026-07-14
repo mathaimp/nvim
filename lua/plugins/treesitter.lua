@@ -6,6 +6,7 @@ vim.pack.add({ {
 require("nvim-treesitter").install({
 	"lua",
 	"python",
+	"regex",
 })
 
 vim.api.nvim_create_autocmd("FileType", {
@@ -25,4 +26,3 @@ vim.api.nvim_create_autocmd("FileType", {
 		end
 	end,
 })
-
