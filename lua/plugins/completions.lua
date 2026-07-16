@@ -14,6 +14,7 @@ require("mini.pairs").setup()
 require("mini.ai").setup()
 require("mini.surround").setup()
 require("mini.jump").setup()
+vim.keymap.set("n", "<leader>e", require("mini.files").open)
 
 require("noice").setup({
 	cmdline = { view = "cmdline" },

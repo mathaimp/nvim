@@ -122,7 +122,7 @@ Before you begin, ensure you have the following external dependencies installed:
 
 | Plugin                                     | Description                               |
 | ------------------------------------------ | ----------------------------------------- |
-| [echasnovski/mini.nvim](https://github.com/echasnovski/mini.nvim) | `mini.pairs`, `mini.ai`, `mini.surround`, `mini.jump` |
+| [echasnovski/mini.nvim](https://github.com/echasnovski/mini.nvim) | `mini.pairs`, `mini.ai`, `mini.surround`, `mini.jump`, `mini.files` |
 | [gbprod/yanky.nvim](https://github.com/gbprod/yanky.nvim) | Improved yank/put with history and cycling |
 | `nvim.undotree` (`packadd`)                | Visualize and browse the undo history     |
 
