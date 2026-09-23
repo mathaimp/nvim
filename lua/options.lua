@@ -1,9 +1,12 @@
 -- Leader
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Basic editing
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.wrap = true
+vim.opt.linebreak = true
 vim.opt.breakindent = true
 vim.opt.undofile = true
 vim.opt.cmdheight = 0

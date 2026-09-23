@@ -21,6 +21,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 			vim.keymap.set("n", "<leader>u", "<cmd>Undotree<CR>", {
 				desc = "Undo tree",
 			})
+			require("plugins.misc")
 		end)
 	end,
 })
